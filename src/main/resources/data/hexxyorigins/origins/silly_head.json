@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "hexxyorigins:silly_power"
+  ],
+  "icon": "minecraft:dirt",
+  "order": 4,
+  "impact": 3,
+  "name": "Silly Head",
+  "description": "The silliest of them all!"
+}

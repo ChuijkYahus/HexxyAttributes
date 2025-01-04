@@ -1,41 +1,39 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "hexxyorigins",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Hexxy Origins",
+	"description": "General linker between Origins and Hex Casting. Adds a few origin's powers that affect hexxes.",
 	"authors": [
-		"Me!"
+		"Just_S"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/JustS-js/HexxyOrigins"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/hexxyorigins/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+          "net.just_s.HexxyOriginsMod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+          "net.just_s.HexxyOriginsModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"hexxyorigins.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "hexxyorigins.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.4",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"hexcasting": ">=0.11.1-7-pre-636",
+		"origins": ">=1.10.0"
 	}
 }
