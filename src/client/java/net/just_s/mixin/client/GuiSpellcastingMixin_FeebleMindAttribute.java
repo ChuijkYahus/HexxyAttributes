@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GuiSpellcasting.class)
-public class GuiSpellcastingMixin_IncomprehensiblePower {
+public class GuiSpellcastingMixin_FeebleMindAttribute {
 	@Inject(at = @At("HEAD"), method = "tick")
 	private void hexxyattributes$close_spellcasting_gui(CallbackInfo info) {
 		// Imagine other addons adding spell casting items like lmao
@@ -20,7 +20,7 @@ public class GuiSpellcastingMixin_IncomprehensiblePower {
 		}
 
 		GuiSpellcasting ths = (GuiSpellcasting)(Object)this;
-		if (!HexxyAttributesMod.hasIncomprehensiblePower(HexxyAttributesModClient.MC.player)) {
+		if (HexxyAttributesModClient.MC.player.getAttributeValue(HexxyAttributesMod.FEEBLE_MIND) <= 0) {
 			return;
 		}
 		ths.closeForReal();

@@ -3,8 +3,8 @@
   "package": "net.just_s.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ItemStaffMixin_IncomprehensiblePower",
-    "PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower",
+    "ItemStaffMixin_FeebleMindAttribute",
+    "PlayerBasedCastEnvMixin_MediaConsumptionModifierAttribute",
     "PlayerEntityMixin_AddCustomAttributes"
   ],
   "injectors": {

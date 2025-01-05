@@ -9,16 +9,16 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(HexAdditionalRenderers.class)
-public class HexAdditionalRenderersMixin_IncomprehensiblePower {
+public class HexAdditionalRenderersMixin_FeebleMindAttribute {
 
     @Redirect(
             method = "tryRenderScryingLensOverlay",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;getAttributeValue(Lnet/minecraft/entity/attribute/EntityAttribute;)D")
     )
     private static double hexxyattributes$lens_renderer(ClientPlayerEntity instance, EntityAttribute entityAttribute) {
-        if (HexxyAttributesMod.hasIncomprehensiblePower(instance)) {
-            return 0;
+        if (instance.getAttributeValue(HexxyAttributesMod.FEEBLE_MIND) <= 0) {
+            return instance.getAttributeValue(entityAttribute);
         }
-        return instance.getAttributeValue(entityAttribute);
+        return 0;
     }
 }

@@ -3,8 +3,7 @@ package net.just_s.mixin;
 import at.petrak.hexcasting.api.addldata.ADMediaHolder;
 import at.petrak.hexcasting.api.casting.eval.env.PlayerBasedCastEnv;
 import at.petrak.hexcasting.api.utils.MediaHelper;
-import io.github.apace100.apoli.component.PowerHolderComponent;
-import net.just_s.power.ModifyMediaConsumptionRatePower;
+import net.just_s.HexxyAttributesMod;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = PlayerBasedCastEnv.class, remap = false)
-public abstract class PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower {
+public abstract class PlayerBasedCastEnvMixin_MediaConsumptionModifierAttribute {
     @Shadow @Final protected ServerPlayerEntity caster;
 
     @Redirect(
@@ -32,14 +31,12 @@ public abstract class PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower {
             pow++;
         } while (concatenated_cost != 0);
 
-        float modified_concatenated_cost = PowerHolderComponent.modify(
-                this.caster,
-                ModifyMediaConsumptionRatePower.class,
-                (float) concatenated_cost
-        );
+        double modified_concatenated_cost =
+                concatenated_cost * this.caster.getAttributeValue(HexxyAttributesMod.MEDIA_CONSUMPTION_MODIFIER);
+
         long modified_cost = 1;
         do {
-            if (Float.compare(modified_concatenated_cost % 1, 0f) == 0) {
+            if (Double.compare(modified_concatenated_cost % 1, 0d) == 0) {
                 modified_cost = (long)modified_concatenated_cost;
                 break;
             }
@@ -64,11 +61,8 @@ public abstract class PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower {
             at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(DD)D")
     )
     private double hexxyattributes$modify_media_consumption_from_health(double cost_to_health_ratio, double half_a_heart) {
-        double modified_cost_to_health_ratio = PowerHolderComponent.modify(
-                this.caster,
-                ModifyMediaConsumptionRatePower.class,
-                cost_to_health_ratio
-        );
+        double modified_cost_to_health_ratio =
+                cost_to_health_ratio * this.caster.getAttributeValue(HexxyAttributesMod.MEDIA_CONSUMPTION_MODIFIER);
         return Math.max(modified_cost_to_health_ratio, half_a_heart);
     }
 }

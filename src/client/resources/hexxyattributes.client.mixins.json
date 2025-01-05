@@ -3,8 +3,8 @@
 	"package": "net.just_s.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"GuiSpellcastingMixin_IncomprehensiblePower",
-		"HexAdditionalRenderersMixin_IncomprehensiblePower"
+		"GuiSpellcastingMixin_FeebleMindAttribute",
+		"HexAdditionalRenderersMixin_FeebleMindAttribute"
 	],
 	"injectors": {
 		"defaultRequire": 1

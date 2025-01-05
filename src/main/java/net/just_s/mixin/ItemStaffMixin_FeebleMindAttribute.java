@@ -13,11 +13,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ItemStaff.class)
-public class ItemStaffMixin_IncomprehensiblePower {
+public class ItemStaffMixin_FeebleMindAttribute {
 	@Inject(at = @At("HEAD"), method = "use", cancellable = true)
 	private void hexxyattributes$disable_staff_if_incomprehensible(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-		if (HexxyAttributesMod.hasIncomprehensiblePower(player)) {
-			cir.setReturnValue(TypedActionResult.fail(player.getStackInHand(hand)));
+		if (player.getAttributeValue(HexxyAttributesMod.FEEBLE_MIND) <= 0.0) {
+			return;
 		}
+		cir.setReturnValue(TypedActionResult.fail(player.getStackInHand(hand)));
 	}
 }
