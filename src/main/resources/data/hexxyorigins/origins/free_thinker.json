@@ -1,0 +1,9 @@
+{
+  "powers": [
+    "hexxyorigins:freedom_of_thoughts_power"
+  ],
+  "icon": "minecraft:spyglass",
+  "impact": 3,
+  "name": "Free thinker",
+  "description": "You think that beliefs should not be formed on the basis of authority, tradition nor any dogma. They should instead be reached by other methods such as logic, reason, and empirical observation."
+}

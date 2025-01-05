@@ -1,0 +1,23 @@
+{
+  "name": "Freethought",
+  "description": "There is no authority to contain your will. Due to that, your ideas spread twice as far!",
+  "type": "origins:multiple",
+
+  "ambit": {
+    "type": "origins:modify_attribute",
+    "attribute": "hexxyattributes:ambit_radius",
+    "modifier": {
+      "operation": "multiply_base_additive",
+      "value": 1
+    }
+  },
+
+  "sentinel": {
+    "type": "origins:modify_attribute",
+    "attribute": "hexxyattributes:sentinel_radius",
+    "modifier": {
+      "operation": "multiply_base_additive",
+      "value": 1
+    }
+  }
+}
