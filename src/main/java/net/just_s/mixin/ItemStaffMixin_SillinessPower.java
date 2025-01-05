@@ -16,8 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ItemStaffMixin_SillinessPower {
 	@Inject(at = @At("HEAD"), method = "use", cancellable = true)
 	private void init(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-		// @silliness check
-		HexxyOriginsMod.LOGGER.info("Does player have silliness: " + HexxyOriginsMod.hasSilliness(player));
 		if (HexxyOriginsMod.hasSilliness(player)) {
 			cir.setReturnValue(TypedActionResult.fail(player.getStackInHand(hand)));
 		}

@@ -8,7 +8,7 @@ import io.github.apace100.origins.origin.OriginLayer;
 import io.github.apace100.origins.registry.ModComponents;
 import net.fabricmc.api.ModInitializer;
 
-import net.just_s.power.SillinessPower;
+import net.just_s.power.IncomprehensiblePower;
 import net.just_s.power.factory.PowerFactories;
 import net.minecraft.entity.player.PlayerEntity;
 import org.slf4j.Logger;
@@ -36,7 +36,7 @@ public class HexxyOriginsMod implements ModInitializer {
 					continue;
 				}
 
-				if (power instanceof SillinessPower) {
+				if (power instanceof IncomprehensiblePower) {
 					return true;
 				}
 			}
