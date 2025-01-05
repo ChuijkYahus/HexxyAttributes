@@ -35,17 +35,25 @@ public abstract class PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower {
             pow++;
         } while (concatenated_cost != 0);
 
-        long base_ten_modifier = 1;
-        while (pow-- != 0) {
-            base_ten_modifier *= 10;
-        }
-
         float modified_concatenated_cost = PowerHolderComponent.modify(
                 this.caster,
                 ModifyMediaConsumptionRatePower.class,
                 (float) concatenated_cost
         );
-        long modified_cost = (long)(modified_concatenated_cost * base_ten_modifier);
+        long modified_cost = 1;
+        do {
+            if (Float.compare(modified_concatenated_cost % 1, 0f) == 0) {
+                modified_cost = (long)modified_concatenated_cost;
+                break;
+            }
+            modified_concatenated_cost *= 10;
+        } while (--pow != 0);
+        while (pow-- != 0) {
+            modified_cost *= 10;
+        }
+        if (modified_cost == 1) {
+            modified_cost = (long)modified_concatenated_cost;
+        }
 
         long expected = MediaHelper.extractMedia(holder, cost, drainForBatteries, true);
         // actually drain amount of media we want
