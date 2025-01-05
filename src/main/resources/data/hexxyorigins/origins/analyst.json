@@ -1,0 +1,9 @@
+{
+  "powers": [
+    "hexxyorigins:deductive_mindset_power"
+  ],
+  "icon": "minecraft:writable_book",
+  "impact": 3,
+  "name": "Analyst",
+  "description": "You have a logical mindset that gives you advantages."
+}

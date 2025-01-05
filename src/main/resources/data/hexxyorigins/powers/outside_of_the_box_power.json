@@ -1,23 +1,10 @@
 {
-  "type": "origins:multiple",
   "name": "Outside of the box",
-  "description": "Thanks to your abstract way of thinking, you are able to map your thought in a bigger scale.",
-
-  "modify_grid_zoom": {
-    "type": "origins:modify_attribute",
-    "attribute": "hexcasting:grid_zoom",
-    "modifier": {
-      "operation": "add_base_early",
-      "value": 1
-    }
-  },
-
-  "modify_scry_sight": {
-    "type": "origins:modify_attribute",
-    "attribute": "hexcasting:scry_sight",
-    "modifier": {
-      "operation": "multiply_total_multiplicative",
-      "value": 0.33
-    }
+  "description": "Thanks to your abstract way of thinking, you are able to map your thought on a bigger scale.",
+  "type": "origins:modify_attribute",
+  "attribute": "hexcasting:grid_zoom",
+  "modifier": {
+    "operation": "add_base_early",
+    "value": 0.5
   }
 }
