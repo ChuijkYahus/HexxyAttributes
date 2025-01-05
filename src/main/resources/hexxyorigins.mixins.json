@@ -3,7 +3,7 @@
 	"package": "net.just_s.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-      "ItemStaffMixin_SillinessPower"
+		"ItemStaffMixin_IncomprehensiblePower"
 	],
 	"injectors": {
 		"defaultRequire": 1

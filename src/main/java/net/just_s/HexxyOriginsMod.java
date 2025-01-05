@@ -26,7 +26,7 @@ public class HexxyOriginsMod implements ModInitializer {
 		LOGGER.info("hexxy origins here");
 	}
 
-	public static boolean hasSilliness(PlayerEntity player) {
+	public static boolean hasIncomprehensiblePower(PlayerEntity player) {
 		OriginComponent originComponent = ModComponents.ORIGIN.get(player);
 		for (Map.Entry<OriginLayer, Origin> map: originComponent.getOrigins().entrySet()) {
 			Origin origin = map.getValue();

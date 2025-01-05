@@ -9,9 +9,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GuiSpellcasting.class)
-public class GuiSpellcastingMixin_SillinessPower {
+public class GuiSpellcastingMixin_IncomprehensiblePower {
 	@Inject(at = @At("HEAD"), method = "tick")
-	private void init(CallbackInfo info) {
+	private void hexxyorigins$close_spellcasting_gui(CallbackInfo info) {
 		// Imagine other addons adding spell casting items like lmao
 		// Ok fr tho, we want to ensure that @silliness power affects other ways of "casting on the fly".
 		// This could be neglected by client (using cheats basically) but uuuugh idc
@@ -20,7 +20,7 @@ public class GuiSpellcastingMixin_SillinessPower {
 		}
 
 		GuiSpellcasting ths = (GuiSpellcasting)(Object)this;
-		if (!HexxyOriginsMod.hasSilliness(HexxyOriginsModClient.MC.player)) {
+		if (!HexxyOriginsMod.hasIncomprehensiblePower(HexxyOriginsModClient.MC.player)) {
 			return;
 		}
 		ths.closeForReal();
