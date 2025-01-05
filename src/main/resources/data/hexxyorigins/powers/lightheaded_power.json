@@ -1,0 +1,9 @@
+{
+  "name": "lightheaded",
+  "description": "Due to constantly being lightheaded, you learnt to use your thoughts more effectively",
+  "type": "hexxyorigins:modify_media_consumption_rate",
+  "modifier": {
+    "operation": "multiply_base_multiplicative",
+    "value": -0.2
+  }
+}
