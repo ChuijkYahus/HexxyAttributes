@@ -4,9 +4,6 @@ import at.petrak.hexcasting.api.addldata.ADMediaHolder;
 import at.petrak.hexcasting.api.casting.eval.env.PlayerBasedCastEnv;
 import at.petrak.hexcasting.api.utils.MediaHelper;
 import io.github.apace100.apoli.component.PowerHolderComponent;
-import io.github.apace100.apoli.component.PowerHolderComponentImpl;
-import io.github.apace100.apoli.power.ModifyAttributePower;
-import net.just_s.HexxyOriginsMod;
 import net.just_s.power.ModifyMediaConsumptionRatePower;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Final;
@@ -23,7 +20,7 @@ public abstract class PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower {
             method = "extractMediaFromInventory",
             at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/api/utils/MediaHelper;extractMedia(Lat/petrak/hexcasting/api/addldata/ADMediaHolder;JZZ)J")
     )
-    private long hexxyorigins$modify_media_consumption_from_items(ADMediaHolder holder, long cost, boolean drainForBatteries, boolean simulate) {
+    private long hexxyattributes$modify_media_consumption_from_items(ADMediaHolder holder, long cost, boolean drainForBatteries, boolean simulate) {
         // I am not that good in computer math, but this should ease the loss of data between casting long to float
         long concatenated_cost = cost;
         long pow = 0;
@@ -66,7 +63,7 @@ public abstract class PlayerBasedCastEnvMixin_ModifyMediaConsumptionRatePower {
             method = "extractMediaFromInventory",
             at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(DD)D")
     )
-    private double hexxyorigins$modify_media_consumption_from_health(double cost_to_health_ratio, double half_a_heart) {
+    private double hexxyattributes$modify_media_consumption_from_health(double cost_to_health_ratio, double half_a_heart) {
         double modified_cost_to_health_ratio = PowerHolderComponent.modify(
                 this.caster,
                 ModifyMediaConsumptionRatePower.class,

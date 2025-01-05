@@ -1,7 +1,7 @@
 package net.just_s.mixin;
 
 import at.petrak.hexcasting.common.items.ItemStaff;
-import net.just_s.HexxyOriginsMod;
+import net.just_s.HexxyAttributesMod;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
@@ -15,8 +15,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ItemStaff.class)
 public class ItemStaffMixin_IncomprehensiblePower {
 	@Inject(at = @At("HEAD"), method = "use", cancellable = true)
-	private void hexxyorigins$disable_staff_if_incomprehensible(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-		if (HexxyOriginsMod.hasIncomprehensiblePower(player)) {
+	private void hexxyattributes$disable_staff_if_incomprehensible(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
+		if (HexxyAttributesMod.hasIncomprehensiblePower(player)) {
 			cir.setReturnValue(TypedActionResult.fail(player.getStackInHand(hand)));
 		}
 	}

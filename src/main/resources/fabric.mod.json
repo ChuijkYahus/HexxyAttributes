@@ -1,30 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "hexxyorigins",
+	"id": "hexxyattributes",
 	"version": "${version}",
-	"name": "Hexxy Origins",
-	"description": "General linker between Origins and Hex Casting. Adds a few origin's powers that affect hexxes.",
+	"name": "Hexxy Attributes",
+	"description": "This modification adds a few Player Entity Attributes that may be used to change your experience playing Hex Casting.",
 	"authors": [
 		"Just_S"
 	],
 	"contact": {
-		"sources": "https://github.com/JustS-js/HexxyOrigins"
+		"sources": "https://github.com/JustS-js/HexxyAttributes"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/hexxyorigins/icon.png",
+	"icon": "assets/hexxyattributes/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "net.just_s.HexxyOriginsMod"
+          "net.just_s.HexxyAttributesMod"
 		],
 		"client": [
-          "net.just_s.HexxyOriginsModClient"
+			"net.just_s.HexxyAttributesModClient"
 		]
 	},
 	"mixins": [
-		"hexxyorigins.mixins.json",
+		"hexxyattributes.mixins.json",
 		{
-			"config": "hexxyorigins.client.mixins.json",
+			"config": "hexxyattributes.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -33,7 +33,9 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"hexcasting": ">=0.11.1-7-pre-636",
+		"hexcasting": ">=0.11.1-7-pre-636"
+	},
+	"suggests": {
 		"origins": ">=1.10.0"
 	}
 }

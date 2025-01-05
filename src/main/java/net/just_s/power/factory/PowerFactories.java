@@ -1,12 +1,10 @@
 package net.just_s.power.factory;
 
-import io.github.apace100.apoli.Apoli;
-import io.github.apace100.apoli.power.ModifyAirSpeedPower;
 import io.github.apace100.apoli.power.ValueModifyingPower;
 import io.github.apace100.apoli.power.factory.PowerFactory;
 import io.github.apace100.apoli.power.factory.PowerFactorySupplier;
 import io.github.apace100.apoli.registry.ApoliRegistries;
-import net.just_s.HexxyOriginsMod;
+import net.just_s.HexxyAttributesMod;
 import net.just_s.power.IncomprehensiblePower;
 import net.just_s.power.ModifyMediaConsumptionRatePower;
 import net.minecraft.registry.Registry;
@@ -17,7 +15,7 @@ public class PowerFactories {
         register(IncomprehensiblePower::createFactory);
         register(() -> ValueModifyingPower.createValueModifyingFactory(
                 ModifyMediaConsumptionRatePower::new,
-                Identifier.of(HexxyOriginsMod.MOD_ID, "modify_media_consumption_rate")
+                Identifier.of(HexxyAttributesMod.MOD_ID, "modify_media_consumption_rate")
         ));
     }
 

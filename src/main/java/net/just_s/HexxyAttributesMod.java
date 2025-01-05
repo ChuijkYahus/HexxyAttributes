@@ -16,8 +16,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-public class HexxyOriginsMod implements ModInitializer {
-	public static final String MOD_ID = "hexxyorigins";
+public class HexxyAttributesMod implements ModInitializer {
+	public static final String MOD_ID = "hexxyattributes";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
