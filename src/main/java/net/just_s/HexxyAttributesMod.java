@@ -26,7 +26,7 @@ public class HexxyAttributesMod implements ModInitializer {
 	);
 	// This sets the multiplying modifier:
 	// Imagine cost for the cast is 100 media points.
-	// The player with modifier of 0.5 will only pay 50 dust.
+	// The player with modifier of 0.5 will only pay 50 media points.
 	// On the other hand, player with modifier 1.7 will have to pay 170 media points.
 	// This also applies to taken health.
 	public static final EntityAttribute MEDIA_CONSUMPTION_MODIFIER = createAttribute(
