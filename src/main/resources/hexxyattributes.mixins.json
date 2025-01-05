@@ -5,6 +5,7 @@
   "mixins": [
     "ItemStaffMixin_FeebleMindAttribute",
     "PlayerBasedCastEnvMixin_MediaConsumptionModifierAttribute",
+    "PlayerBasedCastEnvMixin_RadiusAttributes",
     "PlayerEntityMixin_AddCustomAttributes"
   ],
   "injectors": {

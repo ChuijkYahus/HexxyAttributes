@@ -12,8 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class PlayerEntityMixin_AddCustomAttributes {
     @Inject(method = "createPlayerAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", require = 1, allow = 1, at = @At("RETURN"))
     private static void hexxyattributes$addPlayerAttributes(final CallbackInfoReturnable<DefaultAttributeContainer.Builder> info) {
-        info.getReturnValue()
-                .add(HexxyAttributesMod.FEEBLE_MIND)
-                .add(HexxyAttributesMod.MEDIA_CONSUMPTION_MODIFIER);
+        HexxyAttributesMod.addHexxyAttributes(info);
     }
 }
