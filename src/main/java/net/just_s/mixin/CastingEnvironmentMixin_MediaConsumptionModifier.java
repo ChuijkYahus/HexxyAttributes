@@ -24,6 +24,7 @@ public abstract class CastingEnvironmentMixin_MediaConsumptionModifier {
             return cost;
         }
 
+        // i am not that bright in computer math, i just hope this might help with casting problem
         long concatenated_cost = cost;
         long pow = 0;
         do {
