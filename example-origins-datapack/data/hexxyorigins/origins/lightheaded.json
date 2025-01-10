@@ -1,9 +1,0 @@
-{
-  "powers": [
-    "hexxyorigins:lightheaded_power"
-  ],
-  "icon": "minecraft:glass_bottle",
-  "impact": 3,
-  "name": "Lightheaded",
-  "description": "You are being constantly lightheaded."
-}
