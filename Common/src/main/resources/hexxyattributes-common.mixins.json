@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "net.just_s.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "client.GuiSpellCastingMixin_FeebleMindAttribute",
+    "client.HexAdditionalRenderersMixin_FeebleMindAttribute"
+  ],
+  "mixins": [
+    "CastingEnvironmentMixin_MediaConsumptionModifier",
+    "HexActionsMixin_RegisterAttributePatterns",
+    "ItemStaffMixin_FeebleMindAttribute",
+    "PlayerBasedCastEnvMixin_RadiusAttributes"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

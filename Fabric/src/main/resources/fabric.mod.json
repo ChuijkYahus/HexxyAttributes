@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "hexxyattributes",
+  "version": "${version}",
+  "name": "Hexxy Attributes",
+  "description": "This modification adds a few Player Entity Attributes that may be used to change your experience playing with Hex Casting.",
+  "authors": [
+    "Just_S"
+  ],
+  "contact": {
+    "homepage": "https://just_s.github.io/hexxyattributes",
+    "sources": "https://github.com/Just_S/hexxyattributes"
+  },
+  "license": "CC0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.just_s.fabric.HexxyAttributesModFabric"
+    ],
+    "client": [
+      "net.just_s.fabric.HexxyAttributesModClientFabric"
+    ]
+  },
+  "mixins": [
+    "hexxyattributes-common.mixins.json",
+    "hexxyattributes.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=${minecraftVersion}",
+    "fabricloader": ">=${fabricLoaderVersion}",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=${fabricKotlinVersion}",
+    "architectury": ">=${architecturyVersion}",
+    "hexcasting": ">=${hexcastingVersion}"
+  }
+}

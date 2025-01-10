@@ -1,0 +1,20 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# https://copier.readthedocs.io/en/stable/configuring/#the-copier-answersyml-file
+_commit: v0.0.9
+_src_path: gh:FallingColors/hexdummy
+author: Just_S
+capitalize_platforms: true
+classname: HexxyAttributesMod
+default_branch: 1.20.1-multiloader
+description: This is description, replace it later
+display_name: Hexxy Attributes
+github_repo: hexxyattributes
+hexcasting_version: 0.11.2-pre-702
+homepage_url: https://just_s.github.io/hexxyattributes
+initial_mod_version: '1.1'
+java_version: 17
+license: CC0
+mappings_name: Yarn
+modid: hexxyattributes
+package: net.just_s
+sources_url: https://github.com/Just_S/hexxyattributes
