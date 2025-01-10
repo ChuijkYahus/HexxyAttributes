@@ -7,7 +7,7 @@ This modification adds a few Player Entity Attributes that may be used to change
 
 For now, there are 4 new attributes under hexxyattributes namespace:
 - `hexxyattributes:feeble_mind` - Consider this as a boolean attribute, like `hexcasting:scry_sight`. 
-  If player has Feeble Mind, he will not be able to open Staff's casting GUI.
+  If player has Feeble Mind, they will not be able to open Staff's casting GUI.
   Players with feeble minds won't be able to use Scrying lenses, too.
   They are still able to use artifacts tho!! Base value is `0`, minimum is `0`, maximum is `1`.
 - `hexxyattributes:media_consumption_modifier` - This sets the multiplying modifier:
@@ -15,9 +15,9 @@ For now, there are 4 new attributes under hexxyattributes namespace:
   On the other hand, player with modifier 1.7 will have to pay 170 media points.
   This also applies to taken health. Base value is `1`, minimum is `0`, maximum is `MAX_DOUBLE`.
 - `hexxyattributes:ambit_radius` - As the name suggests, this attribute is used to determine if player's cast
-  is inside his own ambit. Base value is `32`, minimum is `0`, maximum is `MAX_DOUBLE`.
+  is inside their own ambit. Base value is `32`, minimum is `0`, maximum is `MAX_DOUBLE`.
 - `hexxyattributes:sentinel_radius` - As the name suggests, this attribute is used to determine if player's cast
-  is inside his sentinel's ambit. Base value is `16`, minimum is `0`, maximum is `MAX_DOUBLE`.
+  is inside their sentinel's ambit. Base value is `16`, minimum is `0`, maximum is `MAX_DOUBLE`.
 
 ### Purpose and usage
 
