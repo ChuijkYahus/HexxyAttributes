@@ -1,0 +1,46 @@
+{
+  "name": "hexxyattributes.entry.attributes",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:name_tag",
+  "sortnum": 20,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexxyattributes.entry.attributes.entry"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexxyattributes:domain_reflection",
+      "anchor": "hexxyattributes:domain_reflection",
+      "input": "",
+      "output": "num",
+      "text": "hexxyattributes.page.domain_reflection"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexxyattributes:sentinel_domain_reflection",
+      "anchor": "hexxyattributes:sentinel_domain_reflection",
+      "input": "",
+      "output": "num",
+      "text": "hexxyattributes.page.sentinel_domain_reflection"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexxyattributes:media_reflection",
+      "anchor": "hexxyattributes:media_reflection",
+      "input": "",
+      "output": "num",
+      "text": "hexxyattributes.page.media_reflection"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexxyattributes:mind_purification",
+      "anchor": "hexxyattributes:mind_purification",
+      "input": "player",
+      "output": "bool",
+      "text": "hexxyattributes.page.mind_purification"
+    }
+  ]
+}

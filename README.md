@@ -6,7 +6,7 @@ This modification adds a few Player Entity Attributes that may be used to change
 
 
 For now, there are 4 new attributes under hexxyattributes namespace:
-- `hexxyattributes:feeble_mind` - Consider this as a boolean attribute, like `hexcasting:scry_sight`. 
+- `hexxyattributes:feeble_mind` - Consider this as a boolean attribute, like `hexcasting:scry_sight`.
   If player has Feeble Mind, they will not be able to open Staff's casting GUI.
   Players with feeble minds won't be able to use Scrying lenses, too.
   They are still able to use artifacts tho!! Base value is `0`, minimum is `0`, maximum is `1`.
@@ -29,7 +29,7 @@ At first, I just wanted to create specific origin powers for my case, but then m
 If you want to use this addon with the Origins mod, you can check out my [example datapack](example-origins-datapack) that uses new attributes.
 
 I am not very active in modding scene, so don't expect a lot of updates or ports (if any would even be requested).
-But feel free to ask questions and report bugs on the [issue page](https://github.com/JustS-js/HexxyAttributes/issues), fork or create pull requests. 
+But feel free to ask questions and report bugs on the [issue page](https://github.com/JustS-js/HexxyAttributes/issues), fork or create pull requests.
 
 ### License
 

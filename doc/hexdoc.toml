@@ -1,0 +1,56 @@
+modid = "hexxyattributes"
+book = "hexxyattributes:hexxyattributesbook"
+default_lang = "en_us"
+default_branch = "1.20.1-multiloader"
+
+resource_dirs = [  # top takes priority
+    "resources",
+    "{_common.src}/main/resources",
+    { path="{^_common.src}/generated/resources", required=false },
+    "{_fabric.src}/main/resources",
+    { path="{^_fabric.src}/generated/resources", required=false },
+    "{_forge.src}/main/resources",
+    { path="{^_forge.src}/generated/resources", required=false },
+    { modid="hexcasting" },
+    { modid="minecraft" },
+    { modid="hexdoc" },
+]
+export_dir = "src/hexdoc_hexxyattributes/_export/generated"
+
+[template]
+icon = "icon.png"
+include = [
+    "hexxyattributes",
+    "hexcasting",
+    "hexdoc",
+]
+
+[template.args]
+mod_name = "Hexxy Attributes"
+author = "Just_S"
+show_landing_text = false
+
+[extra.hexcasting]
+# regexes for parsing pattern registry files - try running copier update and picking a different regex if your patterns aren't loading
+# NOTE: "!Raw" means "don't apply variable interpolation to this value"
+_pattern_regex = { "!Raw"='register\(\s*HexPattern\.fromAngles\(\s*"(?P<signature>[aqweds]+)",\s*HexDir.(?P<startdir>\w+)\),\s*"(?P<name>[a-zA-Z0-9_\/]+)"' }
+_per_world_value = "true"
+
+[[extra.hexcasting.pattern_stubs]]
+path = "{^^^_common.package}/registry/HexxyAttributesPatternRegistry.java"
+regex = "{^_pattern_regex}"
+per_world_value = "{^_per_world_value}"
+
+# platforms
+
+[_common]
+src = "../common/src"
+package = "{src}/main/java/net/just_s"
+
+[_fabric]
+src = "../fabric/src"
+package = "{src}/main/java/net/just_s/fabric"
+
+[_forge]
+src = "../forge/src"
+package = "{src}/main/java/net/just_s/forge"

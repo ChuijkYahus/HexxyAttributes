@@ -1,0 +1,41 @@
+modLoader = "javafml"
+loaderVersion = "[${forgeDependencyVersion},)"
+license = "CC0"
+
+[[mods]]
+modId = "hexxyattributes"
+version = "${version}"
+displayName = "Hexxy Attributes"
+logoFile = "icon.png"
+authors = "Just_S"
+description = '''
+This modification adds a few Player Entity Attributes that may be used to change your experience playing with Hex Casting.
+'''
+
+[[dependencies.hexxyattributes]]
+modId = "forge"
+mandatory = true
+versionRange = "[${forgeDependencyVersion},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexxyattributes]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraftVersion},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexxyattributes]]
+modId = "architectury"
+mandatory = true
+versionRange = "[${architecturyVersion},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexxyattributes]]
+modId = "hexcasting"
+mandatory = true
+versionRange = "[${hexcastingVersion},)"
+ordering = "NONE"
+side = "BOTH"
